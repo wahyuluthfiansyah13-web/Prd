@@ -53,5 +53,59 @@
     "wallpaper": "xyverse_configured_for_user_logon",
     "audio_output": "rdp_playback_enabled",
     "verification": "Login ulang, aktifkan mic di XyDesk dan izinkan Android. Uji Windows Settings > Sound > Input; kebijakan aktif bukan bukti capture end-to-end."
+  },
+  "grafis": {
+    "mesa": "26.2.4",
+    "opengl": "4.6 (Core Profile) Mesa 26.2.4 (git-9a0169f2a7) | llvmpipe (LLVM 23.1.2, 256 bits) | Mesa",
+    "install": "mesa 26.2.4.0 [Mesa/X.org]",
+    "debug": "INFO | DRIVER:     windows_get_device_registry_entry: Device ID(1) Does not contain a value for \"VulkanImplicitLayers\"\r ; INFO | DRIVER:     windows_get_device_registry_entry: Device ID(1) Does not contain a value for \"VulkanExplicitLayers\"\r ; WARNING | LAYER:   windows_read_data_files_in_registry: Registry lookup failed to get layer manifest files.\r ; DRIVER:            Checking for Driver Manifest files in Registry at HKEY_LOCAL_MACHINE\\SOFTWARE\\Khronos\\Vulkan\\Drivers\r ; INFO | DRIVER:     windows_get_device_registry_files: opening device VMBUS\\{da0a7802-e377-4aac-8e77-0558eb1073f8}\\{5620e0c7-8062-4dce-aeb7-520c7ef76171}\r ; INFO | DRIVER:     windows_get_device_registry_entry: Device ID(1) Does not contain a value for \"VulkanDriverName\"\r ; INFO | DRIVER:     windows_get_device_registry_files: Opening child device 2 - DISPLAY\\MSH062E\\5&1A097CD8&0&UID5527112\r ; DEBUG | DRIVER:    windows_get_device_registry_files: GUID for 2 is not SoftwareComponent skipping\r ; DRIVER:            windows_get_device_registry_files: found no registry files\r ; INFO | DRIVER:     Located json file \"C:\\XyRDP\\grafis\\vulkan\\lvp_icd.x86_64.json\" from registry \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Khronos\\Vulkan\\Drivers\"\r ; INFO | DRIVER:     Driver C:\\XyRDP\\grafis\\vulkan\\lvp_icd.x86_64.json is not recognized as a known driver. It will be assumed to be active\r ; DRIVER:            Found ICD manifest file C:\\XyRDP\\grafis\\vulkan\\lvp_icd.x86_64.json, version 1.0.1\r ; DEBUG | DRIVER:    Searching for ICD drivers named .\\vulkan_lvp.dll\r ; llvmpipe (LLVM 23.1.2, 256 bits)",
+    "loader": "sudah ada",
+    "adapters": "Microsoft Hyper-V Video",
+    "mode": "software",
+    "note": "GPU software (CPU): OpenGL 4.6 (llvmpipe) + Vulkan lavapipe + WARP bawaan. Runner GitHub tanpa GPU fisik; 3D berat tetap lambat.",
+    "dir": "C:\\XyRDP\\grafis",
+    "files": "opengl32.dll,libgallium_wgl.dll,vulkan_lvp.dll",
+    "vulkan": "INFO | DRIVER:     windows_get_device_registry_entry: Device ID(1) Does not contain a value for \"VulkanImplicitLayers\"\r\nINFO | DRIVER:     windows_get_device_registry_entry: Device ID(1) Does not contain a value for \"VulkanExplicitLayers\"\r\nWARNING | LAYER:   windows_read_data_files_in_registry: Registry lookup failed to get layer manifest files.\r\nDRIVER:            Checking for Driver Manifest files in Registry at HKEY_LOCAL_MACHINE\\SOFTWARE\\Khronos\\Vulkan\\Drivers\r\nINFO | DRIVER:     windows_get_device_registry_files: opening device VMBUS\\{da0a7802-e377-4aac-8e77-0558eb1073f8}\\{5620e0c7-8062-4dce-aeb7-520c7ef76171}\r\nINFO | DRIVER:     windows_get_device_registry_entry: Device ID(1) Does not contain a value for \"VulkanDriverName\"\r\nINFO | DRIVER:     windows_get_device_registry_files: Opening child device 2 - DISPLAY\\MSH062E\\5&1A097CD8&0&UID5527112\r\nDEBUG | DRIVER:    windows_get_device_registry_files: GUID for 2 is not SoftwareComponent skipping\r\nDRIVER:            windows_get_device_registry_files: found no registry files\r\nINFO | DRIVER:     Located json file \"C:\\XyRDP\\grafis\\vulkan\\lvp_icd.x86_64.json\" from registry \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Khronos\\Vulkan\\Drivers\"\r\nINFO | DRIVER:     Driver C:\\XyRDP\\grafis\\vulkan\\lvp_icd.x86_64.json is not recognized as a known driver. It will be assumed to be active\r\nDRIVER:            Found ICD manifest file C:\\XyRDP\\grafis\\vulkan\\lvp_icd.x86_64.json, version 1.0.1\r\nDEBUG | DRIVER:    Searching for ICD drivers named .\\vulkan_lvp.dll\r\nllvmpipe (LLVM 23.1.2, 256 bits)"
+  },
+  "samp": {
+    "vcredist": "verified_x86_x64_and_2013_x86",
+    "note": "DirectX legacy diverifikasi x86/x64. GTA SA dan SA-MP dipasang manual dari sumber sah. Game, GPU, dan koneksi server belum diuji.",
+    "gta_installed": false,
+    "status": "dependencies_ready",
+    "directplay": "Enabled",
+    "samp_installed": false,
+    "play_tested": false,
+    "netfx3": "Enabled",
+    "directx": "verified_x86_x64"
+  },
+  "games": {
+    "samp": {
+      "samp_installed": false,
+      "game_dir": null,
+      "status": "dependencies_ready",
+      "note": "DirectX legacy diverifikasi x86/x64. GTA SA dan SA-MP dipasang manual dari sumber sah. Game, GPU, dan koneksi server belum diuji.",
+      "gta_installed": false
+    },
+    "roblox": {
+      "status": "unsupported_environment",
+      "note": "Roblox mensyaratkan Windows 10/11 desktop 64-bit dan dukungan GPU. Windows Server runner bukan target yang didukung; memasang DX9 tidak mengubah ini."
+    },
+    "minecraft_bedrock": {
+      "status": "unsupported_environment",
+      "note": "Bedrock membutuhkan Windows desktop dengan Microsoft Store/Xbox. Windows Server bukan target yang didukung setup ini."
+    },
+    "minecraft_java": {
+      "path": "C:\\Users\\Public\\Desktop\\RdpFree Installers\\MinecraftInstaller.msi",
+      "compatibility": "Launcher resmi mengelola runtime Java. Akun berlisensi dan dukungan OpenGL/GPU tetap diperlukan.",
+      "status": "installer_ready",
+      "note": "Buka installer di sesi Windows, login dengan akun berlisensi, lalu uji game. Belum berarti game sudah berjalan."
+    }
+  },
+  "game_environment": {
+    "windows_server": true,
+    "os": "Microsoft Windows Server 2025 Datacenter",
+    "play_tested": false,
+    "runner": "windows-latest",
+    "hypervisor_present": true
   }
 }
